@@ -5,8 +5,6 @@ from selenium.webdriver.common.by import By
 from util import WaitWrapper
 from Login import *
 
-my_user_name = '18402868183'
-my_password = 'Lcmalcma123'
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-automation'])
 driver = webdriver.Chrome('/Applications/chromedriver', options=options)
@@ -16,18 +14,6 @@ wait_wrapper = WaitWrapper(driver)
 login = LoginByQQ(driver)
 
 login.login()
-# # 登录
-# user_password_button = wait_wrapper((By.CSS_SELECTOR, '[data-cypress="sign-in-with-password"]'))
-# user_password_button.click()
-#
-# user_id = wait_wrapper((By.CSS_SELECTOR, '[name=login]'))
-# # user_id = driver.find_element(By.CSS_SELECTOR, '[name=login]')
-# # user_password = wait_wrapper((By.CSS_SELECTOR, '[name="password"]'))
-# user_password = driver.find_element(By.CSS_SELECTOR, '[name="password"]')
-# user_id.send_keys(my_user_name)
-# user_password.send_keys(my_password)
-# confirm_button = driver.find_element(By.CSS_SELECTOR, '[type="submit"]')
-# confirm_button.click()
 
 # 点击头像，点击名称进入个人主页
 profile_photo = driver.find_element(By.CSS_SELECTOR, '.css-17dlube-AvatarWrapper')
