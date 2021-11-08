@@ -2,16 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
-from util import WaitWrapper
-from Login import *
+from util.DelayUtil import WaitWrapper
+from util.Login import *
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-automation'])
 driver = webdriver.Chrome('/Applications/chromedriver', options=options)
 driver.get("https://leetcode-cn.com/")
 wait_wrapper = WaitWrapper(driver)
-# login = LoginByPassword(driver)
-login = LoginByQQ(driver)
+login = LoginByPassword(driver)
+# login = LoginByQQ(driver)
 
 login.login()
 

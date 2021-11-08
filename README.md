@@ -12,4 +12,6 @@ pip install -r requirements.txt
 
 2、下载 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
-3、`python main.py`
+3、在 config.ini 文件填写力扣/QQ账号和密码
+
+4、`python main.py`

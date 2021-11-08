@@ -1,7 +1,7 @@
 import configparser
 from selenium.webdriver.common.by import By
 
-from util import WaitWrapper
+from util.DelayUtil import WaitWrapper
 import os
 
 class LoginByPassword:
